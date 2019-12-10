@@ -1,0 +1,21 @@
+<b>Static factory methods for Time</b> <a class="right" href="https://hyperskill.org/learn/step/3328">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>The normal way to create an instance of a class is to use a public constructor of the class. But there is another technique. A class can provide a public static factory method that returns an instance of the class. An advantage of static factory methods is that they have names that make the code easier to read.</p> 
+  <p>In this problem, you have the class <code>Time</code> containing three fields: <code>hour</code>, <code>minute</code> and <code>second</code>. Implement the following static factory methods of this class:</p> 
+  <ul> 
+   <li><code>noon()</code> returns an instance initialized with 12 hours, 0 minutes, and 0 seconds.</li> 
+   <li><code>midnight()</code> returns an instance initialized with 0 hours, 0 minutes, and 0 seconds.</li> 
+   <li><code>of(int hour, int minute, int second)</code> returns an instance initialized with passed hour, minute and second if the passed arguments are correct (hour: 0-23, minute: 0-59, seconds: 0-59), otherwise, <code>null</code>.</li> 
+   <li><code>ofSeconds(long seconds)</code> returns an instance initialized with seconds passed since midnight; as an example, the invocation <code>Time.ofSeconds(500000)</code> must create an instance with 18 hours, 53 minutes and 20 seconds (days are skipped);</li> 
+  </ul> 
+  <p>As you see, the methods are more readable than the same constructors. If you want to create an instance of <code>Time</code> representing noon, you can write:</p> 
+  <pre><code class="language-java">Time noon = Time.noon();</code></pre> 
+  <p>Note:</p> 
+  <ul> 
+   <li>do not change fields of the class <code>Time</code>;</li> 
+   <li>in a real application, it may be better to throw an exception than return <code>null</code> when arguments are incorrect.</li> 
+  </ul> 
+  <p>You must not read or output something in this problem. Just implement the static factory methods.</p>
+ </body>
+</html><br><b>Sample Input:</b><br>noon<br><b>Sample Output:</b><br>12 0 0<br><br><b>Sample Input:</b><br>midnight<br><b>Sample Output:</b><br>0 0 0<br><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3577">Show topic summary</a>

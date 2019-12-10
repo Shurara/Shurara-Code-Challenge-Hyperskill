@@ -1,0 +1,39 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.Scanner;\n\nclass Sandwich {\n\n    private String bun;\n\
+    \    private int salad;\n    private int cheese;\n    private int cucumber;\n\
+    \    private int ham;\n\n    public Sandwich(String bun, int salad, int cheese,\
+    \ int cucumber, int ham) {\n        this.bun = bun;\n        this.salad = salad;\n\
+    \        this.cheese = cheese;\n        this.cucumber = cucumber;\n        this.ham\
+    \ = ham;\n    }\n\n    public static class Builder {\n\n        private String\
+    \ bun;\n        private int salad;\n        private int cheese;\n        private\
+    \ int cucumber;\n        private int ham;\n\n        public Builder() {}\n\n \
+    \       public Builder addBun(String bun) {\n            this.bun = bun;\n   \
+    \         return this;\n        }\n\n        public Builder addSalad(int salad)\
+    \ {\n            this.salad = salad;\n            return this;\n        }\n\n\
+    \        public Builder addCheese(int cheese) {\n            this.cheese = cheese;\n\
+    \            return this;\n        }\n\n        public Builder addCucumber(int\
+    \ cucumber) {\n            this.cucumber = cucumber;\n            return this;\n\
+    \        }\n\n        public Builder addHam(int ham) {\n            this.ham =\
+    \ ham;\n            return this;\n        }\n\n        public Sandwich build()\
+    \ {\n            return new Sandwich(bun, salad, cheese, cucumber, ham);\n   \
+    \     }\n    }\n\n    @Override\n    public String toString() {\n        return\
+    \ \"Bun : \" + bun + \"\\n\" +\n                \"Salad : \" + salad + \"\\n\"\
+    \ +\n                \"Cheese : \" + cheese + \"\\n\" +\n                \"Cucumber\
+    \ : \" + cucumber + \"\\n\" +\n                \"Ham : \" + ham;\n    }\n}\n\n\
+    class TestDrive {\n    public static void main(String[] args) {\n        final\
+    \ Scanner scanner = new Scanner(System.in);\n        final Sandwich.Builder sandwichBuilder\
+    \ = new Sandwich.Builder();\n        /* Hello, which bun would like to? */\n \
+    \       String bun = scanner.nextLine();\n        /* How much salad would like\
+    \ to add? */\n        int salad = Integer.valueOf(scanner.nextLine());\n     \
+    \   /* How much cheese would like to add? */ \n        int cheese = Integer.valueOf(scanner.nextLine());\n\
+    \        /* How much cucumber would like to add? */\n        int cucumber = Integer.valueOf(scanner.nextLine());\n\
+    \        /* How much ham would like to add? */\n        int ham = scanner.nextInt();\n\
+    \n        Sandwich sandwich = /* write your code here */\n\n        System.out.println(sandwich);\n\
+    \        scanner.close();\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5810
+status: Solved
+record: -1

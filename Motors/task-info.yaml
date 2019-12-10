@@ -1,0 +1,26 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.Scanner;\n\n/* Product - Motor */\nabstract class Motor\
+    \ {\n\n    String model;\n    long power;\n\n    public Motor(String model, long\
+    \ power) {\n        this.model = model;\n        this.power = power;\n    }\n\n\
+    \    @Override\n    public String toString() {\n        return \"motor={model:\"\
+    \ + model + \",power:\" + power + \"}\";\n    }\n}\n\nclass PneumaticMotor extends\
+    \ Motor {\n    // write your code here ...\n}\n\nclass HydraulicMotor extends\
+    \ Motor {\n    // write your code here ...\n}\n\nclass ElectricMotor extends Motor\
+    \ {\n    // write your code here ...\n}\n\nclass WarpDrive extends Motor {\n \
+    \   // write your code here ...\n}\n\nclass MotorFactory {\n\n    /**\n     *\
+    \ It returns an initialized motor according to the specified type by the first\
+    \ character:\n     * 'P' or 'p' - pneumatic, 'H' or 'h' - hydraulic, 'E' or 'e'\
+    \ - electric, 'W' or 'w' - warp.\n     */\n    public static Motor make(char type,\
+    \ String model, long power) {\n        // write your code here ...\n    }\n}\n\
+    \npublic class Main {\n    public static void main(String args[]) {\n        final\
+    \ Scanner scanner = new Scanner(System.in);\n        final char type = scanner.next().charAt(0);\
+    \     \n        final String model = scanner.next();\n        final long power\
+    \ = scanner.nextLong();\n        // write your code here ...\n        scanner.close();\n\
+    \       System.out.println(motor);\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5768
+status: Solved
+record: -1
