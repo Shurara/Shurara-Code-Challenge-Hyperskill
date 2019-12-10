@@ -1,0 +1,44 @@
+type: code
+custom_name: Builder
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\
+    /**\n * ConcreteComponent - Geek.\n**/\nclass Geek {\n\n   private String type;\n\
+    \   private List<String> languages;\n   private int experience;\n\n   public Geek(String\
+    \ type,List<String> languages, int experience) {\n       this.type = type;\n \
+    \      this.languages = languages;\n       this.experience = experience;\n   }\n\
+    \n    @Override\n    public String toString() {\n        return \"Type : \" +\
+    \ type + \"\\n\" + \n               \"Languages : \" + languages + \"\\n\" +\n\
+    \               \"Experience : \" + experience + \" years\";\n    }\n\n}\n\n/**\n\
+    \ * Builder interface describe step of object creation.\n**/\ninterface Builder\
+    \ {\n    void setType(String type);\n    void setLanguages(List<String> languages);\n\
+    \    void setExperience(int experience);\n}\n\n/**\n * Concrete Builder build\
+    \ Geek component.\n**/\nclass  GeekBuilder implements Builder {\n\n    private\
+    \ String type;\n    private List<String> languages;\n    private int experience;\n\
+    \n    @Override\n    public void setType(String type) {\n        this.type = type;\n\
+    \    }\n\n    @Override\n    public void setLanguages(List<String> languages)\
+    \ {\n        this.languages = languages;\n    }\n    @Override\n    public void\
+    \ setExperience(int experience) {\n        this.experience = experience;\n   \
+    \ }\n\n    public Geek getResult() {\n        // write your code here ...\n  \
+    \  }\n}\n\n/**\n  * Builder Director.\n  */\nclass GeekDirector {\n    public\
+    \ void buildAdmin(Builder builder) {\n        builder.setType(\"Admin\");\n  \
+    \      ArrayList<String> languages = new ArrayList<String>();\n        languages.add(\"\
+    Perl\");\n        languages.add(\"PowerShell\");\n        builder.setLanguages(languages);\n\
+    \        builder.setExperience(10);\n     }\n\n      // write your code here ...\n\
+    }\n\nclass Main {\n    public static void main(String args[]) {\n        final\
+    \ Scanner scanner = new Scanner(System.in);\n        final String geekName = scanner.nextLine();\n\
+    \        final String geekType = scanner.nextLine();\n        scanner.close();\n\
+    \        GeekDirector director = new GeekDirector();\n        GeekBuilder builder\
+    \ = new GeekBuilder();\n        Geek geek = null;\n        if(\"Rockstar\".equals(geekType))\
+    \ {\n            director.buildRockstar(builder);\n            geek = builder.getResult();\n\
+    \        } else if(\"Backend\".equals(geekType)) {\n            director.buildBackend(builder);\n\
+    \            geek = builder.getResult();\n        } else if(\"Admin\".equals(geekType))\
+    \ {\n            director.buildAdmin(builder);\n            geek = builder.getResult();\
+    \        \n        } else {\n            System.out.println(\"Error\");\n    \
+    \        return;\n        }\n        System.out.println(\"Geek \" + geekName +\
+    \ \" created.\");\n        System.out.println(geek);\n\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/5201
+status: Solved
+record: -1
