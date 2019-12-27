@@ -1,0 +1,20 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.*;
+    import java.util.concurrent.*;
+
+
+    class FutureUtils {
+
+        public static int howManyIsDone(List<Future> items) {
+            // write your code here
+        }
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/4944
+status: Solved
+record: -1

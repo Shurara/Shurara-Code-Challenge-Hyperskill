@@ -1,0 +1,46 @@
+<b>Robot control</b> <a class="right" href="https://hyperskill.org/learn/step/2180">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>There is a robot on the game field. The position of the robot on this field is described by two integer coordinates: X and Y. The X axis is oriented from left to right, the Y axis — from bottom to top.</p> 
+  <p>At the initial moment, the robot is in some coordinate on the field. It's also known where the robot looks: up, down, to the right or to the left. The initial position of the robot and its direction can have any values. You need to bring the robot to the destination point of the game field.</p> 
+  <p>A robot is described by the <code>Robot</code> class. You can use the following methods of this class (with unknown implementation):</p> 
+  <pre><code class="language-java">public class Robot {
+    public Direction getDirection() {
+        // current direction
+    }
+    public int getX() {
+        // current X coordinate
+    }
+    public int getY() {
+        // current Y o
+    }
+    public void turnLeft() {
+        // rotate the robot 90 degrees counterclockwise
+    }
+    public void turnRight() {
+        // rotate the robot 90 degrees clockwise
+    }
+    public void stepForward() {
+        // take one step in the current direction
+        // x or y coordinate will be changed by 1
+    }
+}</code></pre> 
+  <p>The direction of the robot is an enumeration:</p> 
+  <pre><code class="language-java">public enum Direction {
+    UP,
+    DOWN,
+    LEFT,
+    RIGHT
+}</code></pre> 
+  <p>It looks like the picture below:</p> 
+  <p style="text-align: center;"><img alt="" height="352" src="https://ucarecdn.com/7695bd9a-190b-4769-93ad-dce3b1f4417e/" width="474"></p> 
+  <p><strong>Example</strong></p> 
+  <p>The following values are passed to the method: toX == 3, toY == 0.</p> 
+  <p>The initial state of this robot: robot.getX() == 0, robot.getY() == 0, robot.getDirection() == Direction.UP.</p> 
+  <p>To bring the robot to the destination point (3, 0), the method should call the following methods:</p> 
+  <pre><code class="language-java">robot.turnRight();
+robot.stepForward();
+robot.stepForward();
+robot.stepForward();</code></pre>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3607">Show topic summary</a>

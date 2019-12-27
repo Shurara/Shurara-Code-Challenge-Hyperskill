@@ -1,0 +1,12 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static void moveRobot(Robot robot, int toX, int toY) {
+        robot.stepForward(); // your implementation here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2180
+status: Solved
+record: -1
