@@ -1,0 +1,40 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.*;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            List<GreekLetter> letterList = new ArrayList<>();
+
+            letterList.add(new GreekLetter("Gamma",  3));
+            letterList.add(new GreekLetter("Omega", 24));
+            letterList.add(new GreekLetter("Alpha",  1));
+        }
+
+        static class GreekLetter {
+
+            private String letter;
+            private Integer position;
+
+            public GreekLetter(String letter, Integer position) {
+                this.letter = letter;
+                this.position = position;
+            }
+
+            @Override
+            public String toString() {
+                return "{" +
+                        "letter='" + letter + '\'' +
+                        ", position=" + position +
+                        '}';
+            }
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2324
+status: Solved
+record: -1
