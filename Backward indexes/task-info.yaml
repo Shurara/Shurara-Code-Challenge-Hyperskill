@@ -1,0 +1,37 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.*;
+    import java.util.stream.Collectors;
+
+    public class Main {
+
+        public static <T> T getElementByIndex(List<T> lst, int index) {
+            // write your code here
+        }
+
+        /* Do not change code below */
+        public static void main(String[] args) {
+
+            final Scanner scanner = new Scanner(System.in);
+
+            final List<String> values = Arrays
+                    .stream(scanner.nextLine().split("\\s+"))
+                    .collect(Collectors.toList());
+
+            final int index = Integer.parseInt(scanner.nextLine());
+
+            try {
+                String element = getElementByIndex(values, index);
+                System.out.println(element);
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Exception");
+            }
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2782
+status: Solved
+record: -1
