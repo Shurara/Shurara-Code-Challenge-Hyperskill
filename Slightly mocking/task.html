@@ -1,0 +1,57 @@
+<b>Slightly mocking</b> <a class="right" href="https://hyperskill.org/learn/step/7600">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p><strong>Test-driven development</strong> is a software development approach that declares writing tests of&nbsp;code <em>before</em> writing the code itself.</p> 
+  <p>Imagine that your team needs to write a divide method of&nbsp;<code>Calculator</code> class</p> 
+  <pre><code class="language-java">public class Calculator {
+    private final CalculatorEngine engine;
+    public Calculator(CalculatorEngine engine) {
+        this.engine = engine;
+    }
+    public String divide(int a, int b) {
+        // implement me
+    }
+}</code></pre> 
+  <p><code>Calculator</code> class reads two input arguments:&nbsp;<code>a</code> and <code>b</code>, and delegates them&nbsp;to <code>divide</code> method of&nbsp;<code>CalculatorEngine</code> class.&nbsp;&nbsp;<code>CalculatorEngine</code>&nbsp;do necessary calculation&nbsp;and&nbsp;returns a <code>result</code>. Then <code>Calculator</code> constructs the output string by the rule:</p> 
+  <ul> 
+   <li><strong>Division of <code>a</code> by <code>b</code> = <code>result</code></strong>, in case of <code>b&nbsp;!= 0</code></li> 
+   <li><strong>Division by zero is prohibited</strong>, in case of <code>b == 0</code></li> 
+  </ul> 
+  <p>Method <code>divide</code> of <code>CalculatorEngine</code> class accepts 2 arguments and returns a result of integer&nbsp;division. If the second argument is zero, it&nbsp;throws the&nbsp;<code>ArithmeticException</code></p> 
+  <pre><code class="language-java">public class CalculatorEngine {
+    public int divide(int a, int b) throws ArithmeticException {
+        return a / b;
+    }
+}</code></pre> 
+  <p>&nbsp;</p> 
+  <p>You teammate has already created tests for the method</p> 
+  <pre><code class="language-java">public class CalculatorTest {
+    @Mock
+    private CalculatorEngine engine = Mockito.mock(CalculatorEngine.class);
+    private Calculator calculator = new Calculator(engine);
+    @Test
+    public void testDivideCase01() {
+        Mockito.when(engine.divide(0, 1)).thenReturn(0);
+        Assert.assertEquals("Division of 0 by 1 = 0", calculator.divide(0, 1));
+    }
+    @Test
+    public void testDivideCase11() {
+        Mockito.when(engine.divide(1, 1)).thenReturn(1);
+        Assert.assertEquals("Division of 1 by 1 = 1", calculator.divide(1, 1));
+    }
+    @Test
+    public void testDivideCase12() {
+        Mockito.when(engine.divide(1, 2)).thenReturn(0);
+        Assert.assertEquals("Division of 1 by 2 = 0", calculator.divide(1, 2));
+    }
+    @Test
+    public void testDivideCaseZeroDivider() {
+        Mockito.when(engine.divide(1, 0)).thenThrow(new ArithmeticException());
+        Assert.assertEquals("Division by zero is prohibited", calculator.divide(1, 0));
+    }
+}</code>
+</pre> 
+  <p>Implement the&nbsp;<code>divide</code>&nbsp;method&nbsp;of <code>Calculator</code>&nbsp;class according tests.</p> 
+  <p>Note, that implementation should invoke the&nbsp;<code>divide</code> method of <code>engine</code> field to be passed&nbsp;. Otherwise&nbsp;you will see the error message: <strong>Please use divide method of engine field</strong></p>
+ </body>
+</html><br><b>Sample Input:</b><br>0<br>1<br><b>Sample Output:</b><br>Division of 0 by 1 = 0<br><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/7591">Show topic summary</a>

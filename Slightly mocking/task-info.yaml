@@ -1,0 +1,20 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Calculator {
+        private CalculatorEngine engine;
+
+        public Calculator(CalculatorEngine engine) {
+           this.engine = engine;
+        }
+
+        public String divide(int a, int b) {
+            // Implement me using engine field
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/7600
+status: Solved
+record: -1
