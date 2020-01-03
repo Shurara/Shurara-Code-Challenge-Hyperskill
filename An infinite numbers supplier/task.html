@@ -1,0 +1,19 @@
+<b>An infinite numbers supplier</b> <a class="right" href="https://hyperskill.org/learn/step/4333">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>Create a supplier that return integer values from 0 to infinity.</p> 
+  <p>After first get() invocation supplier must return 0. After second - 1, next - 2, 3 etc.</p> 
+  <p>So this code should print "0 1 2 3 4 ":</p> 
+  <pre><code class="language-java">Supplier&lt;Integer&gt; sup = getInfiniteRange();
+for(int i = 0; i &lt; 5; i++) {
+    System.out.print(sup.get() + " ");
+}</code></pre> 
+  <p>Also it should be possible to use separate suppliers simultaneously.</p> 
+  <p>For example, this code should print "0 0 1 1 2 2 3 3 4 4 ":</p> 
+  <pre><code class="language-java">Supplier&lt;Integer&gt; sup1 = getInfiniteRange();
+Supplier&lt;Integer&gt; sup2 = getInfiniteRange();
+for(int i = 0; i &lt; 5; i++) {
+    System.out.print(sup1.get() + " " + sup2.get() + " ");
+}</code></pre>
+ </body>
+</html><br><b>Sample Input:</b><br>5<br><b>Sample Output:</b><br>0 1 2 3 4<br>0 0 1 1 2 2 3 3 4 4<br><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 15s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3623">Show topic summary</a>
