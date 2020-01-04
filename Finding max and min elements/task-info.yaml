@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static <T> void findMinMax(
+            Stream<? extends T> stream,
+            Comparator<? super T> order,
+            BiConsumer<? super T, ? super T> minMaxConsumer) {
+
+        // your implementation here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2388
+status: Solved
+record: -1
