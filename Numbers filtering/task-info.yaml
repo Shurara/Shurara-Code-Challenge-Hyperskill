@@ -1,0 +1,12 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static IntStream createFilteringStream(IntStream evenStream, IntStream oddStream) {
+        return // write your stream here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2424
+status: Solved
+record: -1
