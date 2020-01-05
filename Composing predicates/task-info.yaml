@@ -1,0 +1,16 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    /**
+     * The method represents a disjunct operator for a list of predicates.
+     * For an empty list it returns the always false predicate.
+     */
+    public static IntPredicate disjunctAll(List<IntPredicate> predicates) {
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2407
+status: Solved
+record: -1
