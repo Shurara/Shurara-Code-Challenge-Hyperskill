@@ -1,0 +1,13 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static List<String> omitLongStrings(List<String> strings) {
+
+        return strings;
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2425
+status: Solved
+record: -1

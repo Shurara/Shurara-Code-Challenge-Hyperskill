@@ -1,0 +1,12 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static Stream<String> createBadWordsDetectingStream(String text, List<String> badWords) {
+        return // write your stream here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2422
+status: Solved
+record: -1
