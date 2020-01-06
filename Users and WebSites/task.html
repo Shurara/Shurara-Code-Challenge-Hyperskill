@@ -1,0 +1,31 @@
+<b>Users and WebSites</b> <a class="right" href="https://hyperskill.org/learn/step/3080">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>You are writing the application which collects information&nbsp;about what sites were visited by what users.</p> 
+  <p>There are three classes: <code>User</code>, <code>WebSite</code> and <code>Visit</code>. Many fields and methods of these classes are the same.</p> 
+  <p>&nbsp;</p> 
+  <p><img alt="" height="21" src="https://ucarecdn.com/30b1850a-4aed-4a63-a026-7ea80a12a6de/" style="float: left;" width="124"></p> 
+  <p>&nbsp;</p> 
+  <p>Write a new base <strong>abstract</strong> class named <code>BaseEntity</code>. Provided classes must extend it. Move all repeating fields and methods to the new class.</p> 
+  <p>After your modifications, the following code must work correctly:</p> 
+  <pre><code class="language-java">User user = new User();
+user.setName("John Grant");
+BaseEntity userEntity = user;
+userEntity.setId(100);
+userEntity.setVersion(1);
+WebSite site = new WebSite();
+site.setUrl("https://hyperskill.org");
+&nbsp; &nbsp; &nbsp; &nbsp; 
+BaseEntity siteEntity = site;
+siteEntity.setId(101);
+siteEntity.setVersion(1);
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Visit visit = new Visit();
+visit.setUser(user);
+visit.setSite(site);
+&nbsp; &nbsp; &nbsp; &nbsp; 
+BaseEntity baseVisit = visit;
+baseVisit.setId(102);
+baseVisit.setVersion(103);﻿</code></pre>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3597">Show topic summary</a>
