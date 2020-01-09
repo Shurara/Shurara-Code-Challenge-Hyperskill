@@ -1,0 +1,15 @@
+<b>Ternary operator</b> <a class="right" href="https://hyperskill.org/learn/step/2400">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>Let's combine function to build more complex functions using standard functional interfaces.<br></p>
+  <p>Given the predicate <code class="java">condition</code> and two functions <code class="java">ifTrue</code> and <code class="java">ifFalse</code>. Implement a method <code class="java">ternaryOperator</code> which builds a new function returning the result of invoking <code class="java">ifTrue</code>, if the predicate is true and otherwise - the result of invoking <code class="java">ifFalse</code>.</p>
+  <p>Here is an example:</p> 
+  <pre><code class="language-java">Predicate&lt;Object&gt; condition = Objects::isNull;
+Function&lt;Object, Integer&gt; ifTrue = obj -&gt; 0;
+Function&lt;CharSequence, Integer&gt; ifFalse = CharSequence::length;
+Function&lt;String, Integer&gt; safeStringLength = ternaryOperator(condition, ifTrue, ifFalse);</code></pre>
+  <p><span>In the example above, the resulting function returns the length of a string if the reference to the string is not null, otherwise, it returns 0.</span><br></p>
+  <p><span></span></p>
+  <p>Note, it can be collapsed into a single line, but for clarity, additional variables are used.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3623">Show topic summary</a>
