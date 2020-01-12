@@ -1,0 +1,17 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public static <T, U> Function<T, U> ternaryOperator(
+            Predicate<? super T> condition,
+            Function<? super T, ? extends U> ifTrue,
+            Function<? super T, ? extends U> ifFalse) {
+
+        return null; // your implementation here
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2400
+status: Solved
+record: -1
