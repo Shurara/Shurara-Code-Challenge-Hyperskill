@@ -1,0 +1,19 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    /**
+     * Calculates the factorial of the given number n
+     *
+     * @param n >= 0
+     *
+     * @return factorial value
+     */
+    public static long factorial(long n) {
+        // write your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2440
+status: Solved
+record: -1
