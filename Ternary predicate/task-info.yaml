@@ -1,0 +1,15 @@
+type: code
+files:
+- name: src/TernaryIntPredicate.java
+  visible: true
+  text: |-
+    @FunctionalInterface
+    public interface TernaryIntPredicate {
+    // Write a method here
+    }
+
+    public static final TernaryIntPredicate allValuesAreDifferentPredicate = // Write a lambda expression here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2370
+status: Failed
+record: -1
