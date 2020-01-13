@@ -1,0 +1,11 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public class Main {
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2449
+status: Solved
+record: -1
