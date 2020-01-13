@@ -1,0 +1,49 @@
+<b>The total sum of canceled transactions</b> <a class="right" href="https://hyperskill.org/learn/step/2448">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>You have two classes:</p>
+  <ul>
+   <li><b>Transaction: </b>uuid: String, &nbsp;state: State (CANCELED, FINISHED, PROCESSING), sum: Long, created: Date</li>
+   <li><b>Account: </b>number: String<b></b>, balance: Long, transactions: List&lt;Transaction&gt;</li>
+  </ul>Both classes have getters for all fields with the corresponding names (getState(), getSum(), getTransactions() and so on).
+  <br>
+  <p><b></b>W<b></b>rite a method using Stream API that calculates <b>the</b> <b>total sum of canceled transactions</b> for all non-empty accounts (<b>balance &gt; 0</b>). Perhaps, <b>flatMap</b> method can help you to implement it.<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html" rel="nofollow noopener noreferrer"></a></p>
+  <p><b></b></p>
+  <p>Classes<b> Transaction</b>, <b>Account </b>and enum<b> State </b>will be available during testing. You can define your own classes for local testing.</p>
+  <p><b>Important. </b>Use the given template for your method. Pay attention to type of an argument and the returned value. Please, use only Stream API, no cycles.</p>
+  <p><b>Examples:</b> there are 2 accounts (in JSON notation) below. The result is 10 000.<br></p>
+  <pre><code class="language-json">[
+&nbsp; {
+&nbsp; &nbsp; "number": "1001",
+&nbsp; &nbsp; "balance": 0,
+&nbsp; &nbsp; "transactions": [
+&nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; "uuid": "774cedda-9cde-4f53-8bc2-5b4d4859772a",
+&nbsp; &nbsp; &nbsp; &nbsp; "state": "CANCELED",
+&nbsp; &nbsp; &nbsp; &nbsp; "sum": 1000,
+&nbsp; &nbsp; &nbsp; &nbsp; "created": "2016.12.12 18:30:05"
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; ]
+&nbsp; },
+&nbsp; {
+&nbsp; &nbsp; "number": "1002",
+&nbsp; &nbsp; "balance": 8000,
+&nbsp; &nbsp; "transactions": [
+&nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; "uuid": "337868a7-f469-43c0-9042-3422ce37ee26a",
+&nbsp; &nbsp; &nbsp; &nbsp; "state": "FINISHED",
+&nbsp; &nbsp; &nbsp; &nbsp; "sum": 8000,
+&nbsp; &nbsp; &nbsp; &nbsp; "created": "2016.12.12 17:30:55"
+&nbsp; &nbsp; &nbsp; },
+&nbsp; &nbsp; &nbsp; {
+&nbsp; &nbsp; &nbsp; &nbsp; "uuid": "f8047f86-89e7-4226-8b75-74c55a4d7e31",
+&nbsp; &nbsp; &nbsp; &nbsp; "state": "CANCELED",
+&nbsp; &nbsp; &nbsp; &nbsp; "sum": 10000,
+&nbsp; &nbsp; &nbsp; &nbsp; "created": "2016.12.12 18:10:18"
+&nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; ]
+&nbsp; }
+]</code></pre>
+  <br>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3612">Show topic summary</a>
