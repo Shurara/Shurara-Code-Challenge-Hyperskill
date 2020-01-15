@@ -1,0 +1,27 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.Scanner;
+    import java.util.Locale;
+
+    public class Main {
+
+        /* Fix this method */
+        public static String toUpperCase(String str) {
+            return str.toUpperCase(Locale.ENGLISH);
+        }
+
+        /* Do not change code below */
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            String line = scanner.nextLine();
+            line = "none".equalsIgnoreCase(line) ? null : line;
+            System.out.println(toUpperCase(line));
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/1947
+status: Solved
+record: -1
