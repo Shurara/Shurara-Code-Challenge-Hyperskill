@@ -1,0 +1,19 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.function.*;
+    import java.util.stream.*;
+
+    class FunctionUtils {
+
+        public static <T> Supplier<Stream<T>> saveStream(Stream<T> stream){
+            // write your code here
+        }
+
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/4345
+status: Solved
+record: -1

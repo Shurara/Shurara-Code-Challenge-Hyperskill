@@ -1,0 +1,13 @@
+<b>Using streams many times</b> <a class="right" href="https://hyperskill.org/learn/step/4345">Open on Hyperskill</a><br/><br/><html>
+ <head></head>
+ <body>
+  <p>Sometimes after mapping and filtering a stream, you need to use it more than one time. For example, find the maximum and count all the elements of a resulted sequence.</p> 
+  <p>You need to implement a method that solves this problem. The method should save the stream and create a supplier, that can return this stream over and over again.</p> 
+  <p>For example, this code should output 4, 8, 2 on separate lines:</p> 
+  <pre><code class="language-java">Stream&lt;Integer&gt; stream = Arrays.stream(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8});
+Supplier&lt;Stream&lt;Integer&gt;&gt; saved = saveStream(stream.filter(e -&gt; e % 2 == 0));
+System.out.println(saved.get().count());
+System.out.println(saved.get().max(Integer::compareTo).get());
+System.out.println(saved.get().min(Integer::compareTo).get());</code></pre>
+ </body>
+</html><br><b>Sample Input:</b><br>1 2 3 4 5 6 7 8<br><b>Sample Output:</b><br>4<br>8<br>2<br><br><br><font color="gray">Memory limit: 256 Mb</font><br><font color="gray">Time limit: 5s</font><br><br><br/><a href="https://hyperskill.org/learn/step/3612">Show topic summary</a>
