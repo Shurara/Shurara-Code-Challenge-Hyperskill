@@ -1,0 +1,26 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    public class Main {
+
+        public static void method() {
+            // write your code here
+        }
+
+        /* Do not change code below */
+        public static void main(String args[]) {
+            try {
+                method();
+            } catch (RuntimeException e) {
+                System.out.println("RuntimeException");
+            } catch (Exception e) {
+                System.out.println("Exception");
+            }
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2832
+status: Solved
+record: -1
