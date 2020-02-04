@@ -1,0 +1,25 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\n\
+    import java.util.Scanner;\nimport java.util.stream.Collectors;\n\nclass ListUtils\
+    \ {\n\n    /**\n     * It splits the passed list into a sequence of sublists with\
+    \ a predefined size \n     */\n    public static <T> List<List<T>> splitListIntoSubLists(List<T>\
+    \ list, int subListSize) {\n        List<List<T>> sublists = new ArrayList<>();\n\
+    \n        // write your code here\n\n        return sublists;\n    }\n}\n\n/*\
+    \ Please, do not modify code in this class */\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        final Scanner scanner = new Scanner(System.in);\n\
+    \n        final String[] values = scanner.nextLine().split(\"\\\\s+\");\n\n  \
+    \      final List<Integer> list = Arrays.asList(values).stream()\n           \
+    \     .map(Integer::parseInt)\n                .collect(Collectors.toList());\n\
+    \n        final int subListSize = Integer.parseInt(scanner.nextLine());\n\n  \
+    \      final List<List<Integer>> subLists = ListUtils.splitListIntoSubLists(list,\
+    \ subListSize);\n\n        subLists.forEach(subList -> {\n            final String\
+    \ representation = subList.stream().map(Object::toString).collect(Collectors.joining(\"\
+    \ \"));\n            System.out.println(representation);\n        });\n    }\n\
+    }"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2329
+status: Solved
+record: -1
