@@ -1,0 +1,32 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.*;
+
+    class MapUtils {
+
+        public static NavigableMap<Integer, String> getSubMap(NavigableMap<Integer, String> map){
+            // write your code here
+        }
+
+    }
+
+    /* Do not modify code below */
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            TreeMap<Integer, String> map = new TreeMap<>();
+            Arrays.stream(scanner.nextLine().split("\\s")).forEach(s -> {
+                String[] pair = s.split(":");
+                map.put(Integer.parseInt(pair[0]),pair[1]);
+            });
+            NavigableMap<Integer, String> res = MapUtils.getSubMap(map);
+            res.forEach((k, v) -> System.out.println(k + " : " + v));
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2349
+status: Solved
+record: -1
